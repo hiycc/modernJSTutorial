@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Accumulator(startingValue) {
+      this.value = startingValue;
+      this.read = () => {
+        let input = +prompt('input a number', 0);
+        this.value += input;
+      }
+    }
+    let accumulator = new Accumulator(1); // initial value 1
+
+    accumulator.read(); // adds the user-entered value
+    accumulator.read(); // adds the user-entered value
+
+    alert(accumulator.value); // shows the sum of these values
+  </script>
+</body>
+</html>
